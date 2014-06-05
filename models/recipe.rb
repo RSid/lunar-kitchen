@@ -20,7 +20,10 @@ class Recipe
   end
 
   def description
-    @description
+    if description != nil
+      @description
+    else
+      "This recipe doesn't have a description."
   end
 
   def instructions
