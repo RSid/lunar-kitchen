@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'shotgun'
 require 'pg'
 
 require_relative 'models/recipe'
@@ -15,10 +16,12 @@ end
 
 get '/recipes' do
   @recipes = Recipe.all
+
   erb :'recipes/index'
 end
 
 get '/recipes/:id' do
   @recipe = Recipe.find(params[:id])
+  binding.pry
   erb :'recipes/show'
 end
