@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'shotgun'
 require 'pg'
 
 require_relative 'models/recipe'

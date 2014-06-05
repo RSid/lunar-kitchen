@@ -20,14 +20,19 @@ class Recipe
   end
 
   def description
-    if description != nil
+    if @description != nil
       @description
     else
       "This recipe doesn't have a description."
+    end
   end
 
   def instructions
-    @instructions
+    if @instructions != nil
+      @instructions
+    else
+      "This recipe doesn't have any instructions."
+    end
   end
 
   def self.db_connection
